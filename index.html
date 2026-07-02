@@ -3,11 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <meta
+      name="description"
+      content="Check which fonts are installed and available in your browser. Scan web fonts, system fonts, CJK fonts, and emoji fonts with Canvas fallback or the Local Font Access API."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content="Font Inspector" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Font Inspector" />
+    <meta property="og:title" content="Font Inspector - Check Browser Fonts Online" />
+    <meta
+      property="og:description"
+      content="Check which fonts are installed and available in your browser. Scan web fonts, system fonts, CJK fonts, and emoji fonts with Canvas fallback or the Local Font Access API."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:locale:alternate" content="zh_TW" />
+    <meta property="og:locale:alternate" content="ko_KR" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Font Inspector - Check Browser Fonts Online" />
+    <meta
+      name="twitter:description"
+      content="Check which fonts are installed and available in your browser. Scan web fonts, system fonts, CJK fonts, and emoji fonts with Canvas fallback or the Local Font Access API."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Font Inspector",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "isAccessibleForFree": true,
+        "description": "Check which fonts are installed and available in your browser with Canvas fallback or the Local Font Access API.",
+        "inLanguage": ["en", "zh-CN", "zh-TW", "ko", "ja", "es"],
+        "featureList": [
+          "Browser font detection",
+          "Canvas fallback font scan",
+          "Local Font Access API scan",
+          "System font and web font preview",
+          "Multilingual interface"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <title>Font Inspector - Check Browser Fonts Online</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <h1>Font Inspector</h1>
+        <p>
+          Check which fonts are installed and available in your browser. Scan web fonts, system fonts,
+          CJK fonts, and emoji fonts with Canvas fallback or the Local Font Access API.
+        </p>
+        <ul>
+          <li>Detect common browser fonts without permissions using a Canvas fallback scan.</li>
+          <li>Enumerate installed local fonts in supported Chromium desktop browsers with user permission.</li>
+          <li>Preview detected fonts and search through available font families.</li>
+        </ul>
+      </main>
+    </div>
+    <noscript>
+      <main>
+        <h1>Font Inspector</h1>
+        <p>
+          Font Inspector is a browser font checker. Enable JavaScript to scan and preview fonts
+          available in your current browser environment.
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Font Inspector
 
-# Run and deploy your AI Studio app
+A small React app for inspecting fonts available in the current browser environment.
 
-This contains everything you need to run your app locally.
+It supports two scan modes:
 
-View your app in AI Studio: https://ai.studio/apps/f9fbabca-3d4c-495e-b8f8-a17492c519e9
+- Canvas fallback scan for a curated list of common web, system, CJK, and emoji fonts.
+- Local Font Access API scan for browsers that can enumerate installed fonts with user permission.
+- Interface languages: Simplified Chinese, Traditional Chinese, English, Korean, Japanese, and Spanish.
+- SEO metadata, Open Graph/Twitter previews, structured data, and a no-JavaScript fallback.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js and pnpm
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+   ```powershell
+   pnpm install
+   ```
+
+2. Run the app:
+
+   ```powershell
+   pnpm run dev
+   ```
+
+3. Build for production:
+
+   ```powershell
+   pnpm run build
+   ```

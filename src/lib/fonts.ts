@@ -65,3 +65,30 @@ export const POPULAR_FONTS = [
   "cursive",
   "fantasy"
 ];
+
+export const BROWSER_DEFAULT_FONTS = [
+  "system-ui",
+  "sans-serif",
+  "serif",
+  "monospace",
+  "cursive",
+  "fantasy",
+];
+
+export const BROWSER_DEFAULT_FONT_PRIORITY = [
+  ...BROWSER_DEFAULT_FONTS,
+  "Arial",
+  "Times New Roman",
+  "Courier New",
+  "Segoe UI",
+  "Helvetica",
+  "Helvetica Neue",
+  "San Francisco",
+  "Roboto",
+  "Microsoft YaHei",
+  "PingFang SC",
+  "Noto Sans CJK SC",
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Noto Color Emoji"
+];
