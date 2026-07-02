@@ -335,6 +335,7 @@ export default function App() {
                     index={idx} 
                     showStatus={scanMethod !== 'api'}
                     sampleText={t.sampleText}
+                    englishSampleText={TRANSLATIONS.en.sampleText}
                     availableLabel={t.available}
                     missingLabel={t.missing}
                     unavailableLabel={t.fontNotInstalled}

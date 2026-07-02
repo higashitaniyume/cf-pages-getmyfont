@@ -5,6 +5,7 @@ interface FontCardProps {
   name: string;
   isAvailable: boolean;
   sampleText?: string;
+  englishSampleText?: string;
   index: number;
   showStatus?: boolean;
   availableLabel?: string;
@@ -33,12 +34,17 @@ export function FontCard({
   name,
   isAvailable,
   sampleText = "The quick brown fox jumps over the lazy dog",
+  englishSampleText,
   index,
   showStatus = true,
   availableLabel = 'Available',
   missingLabel = 'Missing',
   unavailableLabel = 'Font not installed',
 }: FontCardProps) {
+  const previewTexts = englishSampleText && englishSampleText !== sampleText
+    ? [sampleText, englishSampleText]
+    : [sampleText];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -66,11 +72,20 @@ export function FontCard({
       
       {isAvailable ? (
         <div 
-          className="mt-auto w-full min-w-0 truncate text-2xl text-[#e0e0e0] font-serif"
+          className="mt-auto flex w-full min-w-0 flex-col gap-1 text-[#e0e0e0] font-serif"
           style={{ fontFamily: getFontFamilyValue(name) }}
-          title={sampleText}
+          title={previewTexts.join('\n')}
         >
-          {sampleText}
+          {previewTexts.map((text, previewIndex) => (
+            <div
+              key={text}
+              className={`min-w-0 truncate ${
+                previewIndex === 0 ? 'text-xl' : 'text-sm text-[#8f8f8f]'
+              }`}
+            >
+              {text}
+            </div>
+          ))}
         </div>
       ) : (
         <div className="text-[11px] text-[#444] italic font-mono flex items-center h-[32px] mt-auto">
