@@ -1,0 +1,6 @@
+{
+  "name": "Font Detector",
+  "description": "A tool to detect and identify fonts installed or available in the current user's browser.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
